@@ -1,0 +1,9 @@
+{
+    "title_css": ".header-title",
+    "search_field_css": "#searchbar-activeinput",
+    "search_magnifier_css": "#searchbar-magnifier",
+    "Upcoming_Events_section_css": ".quickstarts .quickstarts-news-events:nth-child(2)",
+    "News_section_css": ".quickstarts .quickstarts-news-events:nth-child(3)",
+    "access_to_Support_chat_css": ".feedback",
+    "search_result_abstract_css": ".search-result-abstract"
+}

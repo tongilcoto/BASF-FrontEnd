@@ -1,0 +1,5 @@
+{
+  "input_username_css": "#username",
+  "input_password_css": "#password",
+  "button_login_css": "#kc-login"
+}

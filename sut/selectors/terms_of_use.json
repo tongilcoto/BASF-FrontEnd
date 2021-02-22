@@ -1,0 +1,5 @@
+{
+  "title_css": ".modal-dialog-header-title",
+  "checkbox_terms_of_use_css": ".modal-dialog-control-checkbox .checkbox:first-child",
+  "button_proceed_css": ".modal-dialog-control-submit .button"
+}
