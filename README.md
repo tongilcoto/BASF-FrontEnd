@@ -48,15 +48,47 @@ Json report can be found at "reports/report.json"
 
 ## RESULTS
 
-Both tests are passed, but the assertion library is using stricter matcher conditions than web search engine
+
+```
+Feature: As a QKnows user I want to check my search results # features/As a QKnows user I want to check my search results.feature:1
+
+  Scenario: As a QKnows user I want to check my search results  # features/As a QKnows user I want to check my search results.feature:2
+    Given I proceed to QKnows main page                         # steps/search.py:6 11.860s
+    When I search for a random meaningful word                  # steps/search.py:13 0.553s
+    Then the first 3 results get the searched word              # steps/search.py:20
+    Then the first 3 results get the searched word              # steps/search.py:20 0.680s
+
+Feature: As a QKnows user I want to successfully log in # features/As a QKnows user I want to successfully log in.feature:1
+
+  Scenario: As a QKnows user I want to successfully log in  # features/As a QKnows user I want to successfully log in.feature:2
+    Given I open QKnows log in page                         # steps/login.py:6 3.789s
+    When I set my user credentials                          # steps/login.py:12 0.286s
+    And I select Log In option                              # steps/login.py:17 4.160s
+    Then I access QKnows main page                          # steps/login.py:29 0.067s
+    And "search field" is visible                           # steps/login.py:35 0.034s
+    And "search magnifier" is visible                       # steps/login.py:35 0.021s
+    And "Upcoming Events section" is visible                # steps/login.py:35 0.017s
+    And "News section" is visible                           # steps/login.py:35 0.016s
+    And "access to Support chat" is visible                 # steps/login.py:35 0.016s
+
+2 features passed, 0 failed, 0 skipped
+2 scenarios passed, 0 failed, 0 skipped
+12 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m21.498s
+```
+
+
+NOTE: Both tests are passed, but the assertion library is using stricter matcher conditions than the web search engine
 
 For example, for "carbon" search, there is a result with "carbonate", which the library throws an error on
 
+```
       Assertion Failed: 
       Expected: a string containing 'carbon'
            but: was 'The present invention relates to a process for the reduction of pitch in an aqueous medium generated in a papermaking or pulping process, comprising the following steps: a) providing an aqueous medium comprising pitch generated in a papermaking or pulping proc…'
+```
 
-In any case, it gives me the opportunity to try screenshots
+In any case, it gives me the opportunity to try screenshots generation
 
 ## Exiting virtual env
 
